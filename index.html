@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/Udemy stuff/Some stuff/glass.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Potta+One&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main>
+    <section class="glass">
+      <div class="dashboard">
+        <div class="userSection">
+          <img src="" alt="">
+          <h1>Michal K.</h1>
+          <p>Platform Consultant</p>
+        </div>
+          <div class="link">
+            <img src="" alt="">
+            <h2>Skills</h2>
+            <ul>
+              <li>CSS & HTML</li>
+              <li>Excel</li>
+              <li>Customer engagements</li>
+              <li>Project Management</li>
+            </ul>
+          </div>
+          <div class="link">
+            <img src="" alt="">
+            <h2>Goal</h2>
+            <p>Develop coding & client communication skills</p>
+          </div>
+          <div class="link">
+            <h2>Find me</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuoSvV_it40iK6LDvQMEw3bypPPY3Dr78ddA&usqp=CAU" alt="">
+          </div>
+
+      </div>
+
+      
+      <section class="game-cards">
+        <div class="games">
+
+          <div class="status">
+            <h1>Active projects</h1>
+            <input type="text">
+          </div>
+
+
+          <div class="card">
+              <img src="https://cdn.shopify.com/s/files/1/1959/4397/t/549/assets/tropic-skincare-logo.svg?v=2611909058321628925" style="width:200px"alt="">            <div class="card-info">
+              <h2>Tropic Skincare</h2>
+              <p>Custom desing</p>
+              <div class="progress"></div>
+            </div>
+            <h2 class="percentage"></h2>
+          </div>
+
+      
+
+
+        <div class="card">
+          <img src="https://cdn.shopify.com/s/files/1/1153/7200/files/umzu-200x80-logo-01_835x334.png?v=1583958950" style="width:200px" alt="">
+          <div class="card-info">
+            <h2>UMZU</h2>
+            <p>POV</p>
+            <div class="progress"></div>
+          </div>
+          <h2 class="percentage"></h2>
+        </div>
+
+        <div class="card">
+          <div class="card-info">
+            <h2>EZZ Gaming</h2>
+            <p>COMING SOON</p>
+            <div class="progress"></div>
+          </div>
+          <h2 class="percentage"></h2>
+        </div>
+      </div>
+      </section>
+
+    </section>
+  </main>
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="thunder">
+    <div class="thunder1"></div>
+    <div class="thunder2"></div>
+    <div class="thunder3"></div>
+    <div class="thunder4"></div>
+    <div class="thunder5"></div>
+  </div>
+  <script>
+    
+var tL = gsap.timeline({defaults: {ease:Elastic.easeOut.config(1.1,0.4)}});
+
+tL.to('.circle1', {left:"15%", rotate:360,duration:2});
+  </script>
+  <style>
+    *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+main{
+  min-height: 100vh;
+  background: linear-gradient(to right top,#65dfc9,#6cdb6c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+h2,h1{
+  font-family: 'Potta One', cursive;
+}
+h1{
+  font-size: 30px;
+  color: #65dfc9;
+}
+p,li{
+  font-family: 'Hachi Maru Pop', cursive;
+}
+
+
+
+.glass{
+  background: white;
+  min-height: 80vh;
+  width: 60%;
+  background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+  border-radius: 2rem;
+  z-index:2;
+  backdrop-filter: blur(20px);
+  display: flex;
+}
+.circle1,
+.circle2{
+  background: white;
+  background: linear-gradient(to right bottom,rgba(255,255,255,1),rgba(255,255,255,0.5));
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+  z-index:0;
+}
+.circle1{
+  top:5%;
+  left:80%;
+}
+.circle2{
+  bottom:5%;
+  right:10%;
+}
+.dashboard{
+  flex:.2;
+  background: linear-gradient(to right bottom,rgba(255,255,255,.2),rgba(255,255,255,0.5));
+  border-radius: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: top;
+  align-items: center;
+}
+
+.link{
+  display: flex;
+  flex-flow: column;
+  margin:2rem 0rem 0;
+  padding:1rem 5rem;
+}
+.link ul{
+  display: flex;
+  flex-flow: column;
+  padding: 10px 0 0 0;
+}
+.link img{
+
+  width: 100px;
+  cursor: pointer;
+}
+.status{
+  margin-bottom: 3rem;
+}
+.status input{
+  background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+  border:none;
+  width:50%;
+  padding:.5rem;
+  border-radius: 2rem;
+}
+.games{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin:1rem 5rem;
+}
+.card{
+  display: flex;
+  background: linear-gradient(to left top, rgba(255,255,255,.2),rgba(255,255,255,.9));
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122,122,122,.2);
+  justify-content: space-between;
+  cursor: pointer;
+  width: 80vh;
+}
+.progress{
+  background: linear-gradient(to right top, #65dfc9,#6cdbeb);
+  width:100%;
+  height: 25%;
+  border-radius: 1rem;
+  position:relative;
+  overflow: hidden;
+}
+.progress::after{
+  position: absolute;
+  content: "";
+  width:100%;
+  height: 100%;
+  background:rgb(236,236,236);
+  left:40%;
+}
+.card-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:nth-child(4) .progress::after{
+  display: none;
+}
+  </style>
+</body>
+</html>
